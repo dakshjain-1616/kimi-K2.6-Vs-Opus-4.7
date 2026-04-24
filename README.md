@@ -15,14 +15,14 @@ Head-to-head comparison of `moonshotai/kimi-k2.6` against `anthropic/claude-opus
 
 | Metric | Opus 4.7 | Kimi K2.6 |
 |---|---:|---:|
-| Judge wins | 8 | 2 |
+| Judge wins | 4 | 6 |
 | Ties | 0 | — |
 | Unresolved (judge JSON parse failed) | 0 | — |
-| Avg judge score (/10) | 8.1 | 5.2 |
-| Avg latency | 32.6 s | 155.0 s |
-| Avg total tokens | 3,497 | 5,682 |
+| Avg judge score (/10) | 8.0 | 7.2 |
+| Avg latency | 29.7 s | 496.8 s |
+| Avg total tokens | 3,561 | 14,297 |
 
-Per-task winners (GPT-5.4 judge): **Opus** — `analysis_001`, `analysis_002`, `analysis_003`, `coding_001`, `coding_002`, `coding_003`, `coding_004`, `reasoning_002`. **Kimi** — `reasoning_001`, `reasoning_003`.
+Per-task winners (GPT-5.4 judge): **Opus** — `analysis_003`, `coding_002`, `coding_004`, `reasoning_002`. **Kimi** — `analysis_001`, `analysis_002`, `coding_001`, `coding_003`, `reasoning_001`, `reasoning_003`.
 
 ### Averages
 
@@ -42,12 +42,93 @@ Per-task winners (GPT-5.4 judge): **Opus** — `analysis_001`, `analysis_002`, `
 
 ### Caveats
 
-1. **Kimi reasoning-budget exhaustion.** Kimi K2.6 is a thinking model. On **7/10 tasks** it hit `finish_reason=length` after consuming the 6,000-token completion budget on internal reasoning and never emitted a final `content` field. In those cases the judge was shown the raw reasoning trace as a fallback (prefixed `[NOTE: only reasoning returned...]`). The OpenRouter `reasoning.max_tokens` hint (2,500 tokens) is not strictly enforced by the Moonshot upstream. Opus hit `finish_reason=length` on 1/10 (`coding_001`) but still emitted complete content. This is a real disadvantage for Kimi under the current budget — raising `max_tokens` would likely improve its scores.
-2. **Judge independence.** The judge is `openai/gpt-5.4`, which is neither contestant. A prior run used Opus 4.7 as judge; swapping to an independent judge flipped exactly one verdict (`reasoning_001`: opus → kimi) and narrowed Opus's avg-score lead slightly. The ordering is stable across judges.
-3. **Anonymization.** A/B assignment is randomized per task so the judge sees neutral labels.
-4. **Small n.** 10 tasks. Treat this as a qualitative sanity check, not a statistically rigorous eval.
+1. **Budgets uncapped for fairness.** Both models run with `max_tokens=32000` and no `reasoning.max_tokens` cap, so Kimi's thinking chain is never truncated and both models can finish on their own terms. With this budget, 8/10 Kimi responses complete cleanly with `finish_reason=stop`. The two remaining Kimi tasks both failed for non-budget reasons: `reasoning_002` hit a transient upstream `JSONDecodeError` from OpenRouter/Moonshot, and on `analysis_003` Kimi burned 21k completion tokens entirely inside reasoning (well under the 32k ceiling) and never emitted a final `content` — a model-side wrap-up issue, not a cap. In both cases the judge saw the raw reasoning trace as a fallback (prefixed `[NOTE: only reasoning returned...]`). Opus completes cleanly on all 10.
+2. **Latency cost.** Letting Kimi reason to completion is expensive wall-clock: Kimi averages ~497 s per task (up to ~20 min on `coding_002`) versus ~30 s for Opus. A full run is ~90 min.
+3. **Judge independence.** The judge is `openai/gpt-5.4`, which is neither contestant.
+4. **Anonymization.** A/B assignment is randomized per task so the judge sees neutral labels.
+5. **Small n.** 10 tasks. Treat this as a qualitative sanity check, not a statistically rigorous eval.
 
 Full per-task reasoning, scores, and truncated responses are in [`REPORT.md`](REPORT.md).
+
+## Sample outputs
+
+Three illustrative tasks — one clear Kimi win, one clear Opus win, one failure mode. Full responses are in `outputs/<task_id>.json`.
+
+### Kimi win — `reasoning_003` (causal inference, ice-cream/drowning)
+
+Judge: Kimi **9.67** vs Opus **8.67**. Both correctly identify Person C and name temperature as the confounder, but Kimi's response is longer and more pedagogically structured.
+
+<details><summary>Opus response (excerpt)</summary>
+
+```
+# Correlation vs. Causation: The Ice Cream and Drowning Case
+
+## 1. Who is Most Likely Correct?
+
+**Person C is most likely correct**, though Person B is partially right and Person A is almost certainly wrong.
+
+- **Person A** commits the classic *cum hoc ergo propter hoc* fallacy ("with this, therefore
+  because of this"). While the cramp mechanism is a common myth, there's minimal scientific
+  evidence that eating before swimming meaningfully increases drowning risk...
+```
+
+</details>
+
+<details><summary>Kimi response (excerpt)</summary>
+
+```
+This classic example is a cornerstone of causal inference pedagogy because it starkly
+illustrates how a robust statistical association can completely dissolve once the underlying
+causal structure is revealed.
+
+### 1. Who is most likely correct and why?
+
+**Person C is the most correct.**
+
+To understand why, we must distinguish between three distinct concepts: **direct causation**,
+**spuriousness**, and **confounding**.
+
+*   Person A commits the *post hoc ergo propter hoc* fallacy...
+```
+
+</details>
+
+### Opus win — `coding_004` (query optimization)
+
+Judge: Opus **9.33** vs Kimi **7.33**. Both diagnose the O(U·O·P) nested-scan and propose hash-index joins. Judge preferred Opus for tighter complexity walk-through and the more realistic runtime estimate.
+
+<details><summary>Opus response (excerpt)</summary>
+
+```
+## 1. Complexity Analysis of Original Code
+
+**Time Complexity: O(U × O × P)**
+- For each user (U=1M), iterate all orders (O=10M), and for each matching order, iterate
+  all products (P=100K)
+- Worst case: 1,000,000 × 10,000,000 × 100,000 = 10¹⁸ operations
+- Even with matches being sparse, this is catastrophically slow — would take years to complete
+```
+
+</details>
+
+<details><summary>Kimi response (excerpt)</summary>
+
+```
+## 1. Complexity Analysis (Original)
+
+| Metric | Complexity | Notes |
+|--------|-----------|-------|
+| **Time** | **O(U × O × P)** | 1M × 10M × 100K = 10²¹ dictionary key comparisons. |
+| **Space** | **O(U + O + P + R)** | Stores all inputs plus results list R. |
+
+At ~50 ns per Python operation, the original would take ~317,000 years to finish.
+```
+
+</details>
+
+### Failure mode — `reasoning_002` (expected-value paradox)
+
+Judge: Opus **7.33** vs Kimi **1.00**. Kimi hit a transient upstream `JSONDecodeError` from OpenRouter/Moonshot mid-stream and produced **no content at all** — the judge was forced to score an empty response. This is not a budget issue (same prompt sometimes completes fine); it's upstream flakiness and is the single largest drag on Kimi's average.
 
 ## Run it yourself
 
@@ -57,7 +138,7 @@ pip install -r requirements.txt
 echo "OPENROUTER_API_KEY=sk-or-v1-..." > .env
 
 python run_comparison.py --dry-run                          # validate setup & resolve slugs
-python run_comparison.py                                    # full run (~25 min)
+python run_comparison.py                                    # full run (~90 min; Kimi reasoning is slow)
 python run_comparison.py --only coding_001                  # single task
 python run_comparison.py --skip-judge                       # responses only, no judge
 python run_comparison.py --rejudge-only                     # reuse outputs/*.json, re-run judge only

@@ -83,7 +83,7 @@ def make_client():
     return client
 
 
-def call_model(client, slug, prompt, max_tokens=6000, temperature=0.3, reasoning_max=2500):
+def call_model(client, slug, prompt, max_tokens=32000, temperature=0.3, reasoning_max=None):
     t0 = time.time()
     try:
         kwargs = dict(
@@ -92,8 +92,8 @@ def call_model(client, slug, prompt, max_tokens=6000, temperature=0.3, reasoning
             temperature=temperature,
             max_tokens=max_tokens,
         )
-        # Cap reasoning budget for thinking models (kimi-k2.6) so they actually emit content
-        kwargs["extra_body"] = {"reasoning": {"max_tokens": reasoning_max}}
+        if reasoning_max is not None:
+            kwargs["extra_body"] = {"reasoning": {"max_tokens": reasoning_max}}
         resp = client.chat.completions.create(**kwargs)
         latency = (time.time() - t0) * 1000
         usage = resp.usage
@@ -161,7 +161,7 @@ def judge(client, slug, task, resp_a_text, resp_b_text):
         a=resp_a_text or "[no response]",
         b=resp_b_text or "[no response]",
     )
-    result = call_model(client, slug, prompt, max_tokens=3000, temperature=0.0, reasoning_max=1500)
+    result = call_model(client, slug, prompt, max_tokens=8000, temperature=0.0)
     parsed = None
     raw = result["text"]
     # Extract JSON
@@ -292,9 +292,9 @@ def write_report(per_task, opus_slug, kimi_slug, judge_slug, skip_judge):
     empty_kimi = [e['task']['id'] for e in per_task if not e['record']['by_model']['kimi'].get('content','').strip()]
     empty_opus = [e['task']['id'] for e in per_task if not e['record']['by_model']['opus'].get('content','').strip()]
     if empty_kimi or empty_opus:
-        lines.append("### Caveat: thinking-model token exhaustion")
+        lines.append("### Caveat: empty-content responses")
         lines.append("")
-        lines.append(f"Kimi K2.6 is a reasoning model. On {len(empty_kimi)}/{len(per_task)} tasks it hit `finish_reason=length` with its reasoning trace but produced no final `content`. For those tasks the judge was shown the raw reasoning trace as a fallback (marked `[NOTE: only reasoning returned...]`). Budget: 6000 max_tokens, with a 2500-token `reasoning.max_tokens` hint (which Moonshot does not strictly enforce).")
+        lines.append(f"Budget: `max_tokens=32000`, no `reasoning.max_tokens` cap — both models can fully reason and emit content. On {len(empty_kimi)}/{len(per_task)} tasks Kimi produced no final `content` (upstream streaming error, or model ended without emitting a message). For those tasks the judge was shown the raw reasoning trace as a fallback (marked `[NOTE: only reasoning returned...]`).")
         lines.append("")
         if empty_kimi:
             lines.append(f"- Kimi empty-content tasks: `{', '.join(empty_kimi)}`")

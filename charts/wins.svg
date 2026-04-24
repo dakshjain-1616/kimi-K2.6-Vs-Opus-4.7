@@ -2,12 +2,12 @@
 <rect width="520" height="260" fill="#FAFAFA"/>
 <text x="260.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#222">Judge-decided wins (n=10)</text>
 
-<rect x="160" y="60" width="240.0" height="24" fill="#C96442"/>
+<rect x="160" y="60" width="120.0" height="24" fill="#C96442"/>
 <text x="152" y="77" text-anchor="end" font-size="13" fill="#222" font-weight="500">Opus 4.7 wins</text>
-<text x="406.0" y="77" font-size="13" fill="#222" font-weight="600">8</text>
-<rect x="160" y="98" width="60.0" height="24" fill="#5B8DEF"/>
+<text x="286.0" y="77" font-size="13" fill="#222" font-weight="600">4</text>
+<rect x="160" y="98" width="180.0" height="24" fill="#5B8DEF"/>
 <text x="152" y="115" text-anchor="end" font-size="13" fill="#222" font-weight="500">Kimi K2.6 wins</text>
-<text x="226.0" y="115" font-size="13" fill="#222" font-weight="600">2</text>
+<text x="346.0" y="115" font-size="13" fill="#222" font-weight="600">6</text>
 <rect x="160" y="136" width="0.0" height="24" fill="#888"/>
 <text x="152" y="153" text-anchor="end" font-size="13" fill="#222" font-weight="500">Ties</text>
 <text x="166.0" y="153" font-size="13" fill="#222" font-weight="600">0</text>

@@ -176,8 +176,10 @@ def main():
 
     opus_lat = [e["rec"]["by_model"]["opus"]["latency_ms"] / 1000 for e in data]
     kimi_lat = [e["rec"]["by_model"]["kimi"]["latency_ms"] / 1000 for e in data]
-    opus_tok = [e["rec"]["by_model"]["opus"]["total_tokens"] or 0 for e in data]
-    kimi_tok = [e["rec"]["by_model"]["kimi"]["total_tokens"] or 0 for e in data]
+    opus_tok_raw = [e["rec"]["by_model"]["opus"]["total_tokens"] for e in data]
+    kimi_tok_raw = [e["rec"]["by_model"]["kimi"]["total_tokens"] for e in data]
+    opus_tok = [t or 0 for t in opus_tok_raw]
+    kimi_tok = [t or 0 for t in kimi_tok_raw]
 
     opus_scores, kimi_scores, winners = [], [], []
     for e in data:
@@ -202,7 +204,7 @@ def main():
         [
             ("Avg judge score (/10)", avg(valid_scores_o), avg(valid_scores_k)),
             ("Avg latency (s)", avg(opus_lat), avg(kimi_lat)),
-            ("Avg total tokens", avg(opus_tok), avg(kimi_tok)),
+            ("Avg total tokens", avg(opus_tok_raw), avg(kimi_tok_raw)),
         ],
         "summary.svg",
         fmt="{:.1f}",
