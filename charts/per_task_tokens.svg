@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="720" height="380" fill="#FAFAFA"/>
+<text x="360.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#222">Total tokens per task</text>
+
+<line x1="70" y1="300.0" x2="690" y2="300.0" stroke="#E5E5E5" stroke-width="1"/>
+<text x="62" y="304.0" text-anchor="end" font-size="11" fill="#222">0</text>
+<line x1="70" y1="238.75" x2="690" y2="238.75" stroke="#E5E5E5" stroke-width="1"/>
+<text x="62" y="242.75" text-anchor="end" font-size="11" fill="#222">1750</text>
+<line x1="70" y1="177.5" x2="690" y2="177.5" stroke="#E5E5E5" stroke-width="1"/>
+<text x="62" y="181.5" text-anchor="end" font-size="11" fill="#222">3500</text>
+<line x1="70" y1="116.25" x2="690" y2="116.25" stroke="#E5E5E5" stroke-width="1"/>
+<text x="62" y="120.25" text-anchor="end" font-size="11" fill="#222">5250</text>
+<line x1="70" y1="55.0" x2="690" y2="55.0" stroke="#E5E5E5" stroke-width="1"/>
+<text x="62" y="59.0" text-anchor="end" font-size="11" fill="#222">7000</text>
+<rect x="77.3" y="205.57" width="21.7" height="94.43" fill="#C96442"/>
+<rect x="103.0" y="81.70499999999998" width="21.7" height="218.29500000000002" fill="#5B8DEF"/>
+<text x="88.14999999999999" y="201.57" text-anchor="middle" font-size="10" fill="#222">2698</text>
+<text x="113.85" y="77.70499999999998" text-anchor="middle" font-size="10" fill="#222">6237</text>
+<text x="101.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 101.0 315)">analysis_001</text>
+<rect x="139.3" y="168.19" width="21.7" height="131.81" fill="#C96442"/>
+<rect x="165.0" y="83.245" width="21.7" height="216.755" fill="#5B8DEF"/>
+<text x="150.15" y="164.19" text-anchor="middle" font-size="10" fill="#222">3766</text>
+<text x="175.85" y="79.245" text-anchor="middle" font-size="10" fill="#222">6193</text>
+<text x="163.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 163.0 315)">analysis_002</text>
+<rect x="201.3" y="218.03" width="21.7" height="81.97" fill="#C96442"/>
+<rect x="227.0" y="79.04500000000002" width="21.7" height="220.95499999999998" fill="#5B8DEF"/>
+<text x="212.15" y="214.03" text-anchor="middle" font-size="10" fill="#222">2342</text>
+<text x="237.85" y="75.04500000000002" text-anchor="middle" font-size="10" fill="#222">6313</text>
+<text x="225.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 225.0 315)">analysis_003</text>
+<rect x="263.3" y="81.10999999999999" width="21.7" height="218.89000000000001" fill="#C96442"/>
+<rect x="289.0" y="84.82" width="21.7" height="215.18" fill="#5B8DEF"/>
+<text x="274.15000000000003" y="77.10999999999999" text-anchor="middle" font-size="10" fill="#222">6254</text>
+<text x="299.85" y="80.82" text-anchor="middle" font-size="10" fill="#222">6148</text>
+<text x="287.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 287.0 315)">coding_001</text>
+<rect x="325.3" y="149.78" width="21.7" height="150.22" fill="#C96442"/>
+<rect x="351.0" y="187.23000000000002" width="21.7" height="112.77" fill="#5B8DEF"/>
+<text x="336.15000000000003" y="145.78" text-anchor="middle" font-size="10" fill="#222">4292</text>
+<text x="361.85" y="183.23000000000002" text-anchor="middle" font-size="10" fill="#222">3222</text>
+<text x="349.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 349.0 315)">coding_002</text>
+<rect x="387.3" y="153.945" width="21.7" height="146.055" fill="#C96442"/>
+<rect x="413.0" y="83.14000000000001" width="21.7" height="216.85999999999999" fill="#5B8DEF"/>
+<text x="398.15000000000003" y="149.945" text-anchor="middle" font-size="10" fill="#222">4173</text>
+<text x="423.85" y="79.14000000000001" text-anchor="middle" font-size="10" fill="#222">6196</text>
+<text x="411.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 411.0 315)">coding_003</text>
+<rect x="449.3" y="172.425" width="21.7" height="127.57499999999999" fill="#C96442"/>
+<rect x="475.0" y="134.625" width="21.7" height="165.375" fill="#5B8DEF"/>
+<text x="460.15000000000003" y="168.425" text-anchor="middle" font-size="10" fill="#222">3645</text>
+<text x="485.85" y="130.625" text-anchor="middle" font-size="10" fill="#222">4725</text>
+<text x="473.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 473.0 315)">coding_004</text>
+<rect x="511.29999999999995" y="212.5" width="21.7" height="87.5" fill="#C96442"/>
+<rect x="537.0" y="81.215" width="21.7" height="218.785" fill="#5B8DEF"/>
+<text x="522.15" y="208.5" text-anchor="middle" font-size="10" fill="#222">2500</text>
+<text x="547.85" y="77.215" text-anchor="middle" font-size="10" fill="#222">6251</text>
+<text x="535.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 535.0 315)">reasoning_001</text>
+<rect x="573.3" y="212.36" width="21.7" height="87.64" fill="#C96442"/>
+<rect x="599.0" y="83.63" width="21.7" height="216.37" fill="#5B8DEF"/>
+<text x="584.15" y="208.36" text-anchor="middle" font-size="10" fill="#222">2504</text>
+<text x="609.85" y="79.63" text-anchor="middle" font-size="10" fill="#222">6182</text>
+<text x="597.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 597.0 315)">reasoning_002</text>
+<rect x="635.3" y="202.28" width="21.7" height="97.72" fill="#C96442"/>
+<rect x="661.0" y="112.60999999999999" width="21.7" height="187.39000000000001" fill="#5B8DEF"/>
+<text x="646.15" y="198.28" text-anchor="middle" font-size="10" fill="#222">2792</text>
+<text x="671.85" y="108.60999999999999" text-anchor="middle" font-size="10" fill="#222">5354</text>
+<text x="659.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 659.0 315)">reasoning_003</text>
+<line x1="70" y1="300" x2="690" y2="300" stroke="#222" stroke-width="1.5"/>
+<line x1="70" y1="55" x2="70" y2="300" stroke="#222" stroke-width="1.5"/>
+<text x="15" y="177.5" text-anchor="middle" font-size="12" fill="#222" transform="rotate(-90 15 177.5)">tokens</text>
+<rect x="510" y="63" width="14" height="14" fill="#C96442"/><text x="530" y="74" font-size="12" fill="#222">Opus 4.7</text>
+<rect x="600" y="63" width="14" height="14" fill="#5B8DEF"/><text x="620" y="74" font-size="12" fill="#222">Kimi K2.6</text>
+</svg>
