@@ -1,6 +1,6 @@
 # Kimi K2.6 vs Claude Opus 4.7 — Benchmark
 
-> Built autonomously using **[NEO — Your Autonomous AI Engineering Agent](https://heyneo.com)**.
+> Benchmarking and reporting done autonomously using **[NEO — Your Autonomous AI Engineering Agent](https://heyneo.com)**.
 >
 > [![VS Code extension](https://img.shields.io/badge/VS_Code-NEO_extension-007ACC?logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=NeoResearchInc.heyneo)
 > [![Cursor extension](https://img.shields.io/badge/Cursor-NEO_extension-000000?logo=cursor&logoColor=white)](https://marketplace.cursorapi.com/items/?itemName=NeoResearchInc.heyneo)
