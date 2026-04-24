@@ -1,70 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-<rect width="720" height="380" fill="#FAFAFA"/>
-<text x="360.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#222">Total tokens per task</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="860" height="420" fill="#FFFFFF"/>
+<rect x="1" y="1" width="858" height="418" rx="10" fill="#FBFBFB" stroke="#EEF0F3" stroke-width="1"/>
+<text x="28" y="34" font-size="16" font-weight="700" fill="#1F2328">Total tokens per task</text>
+<text x="28" y="54" font-size="12" fill="#6A737D">prompt + completion tokens</text>
 
-<line x1="70" y1="300.0" x2="690" y2="300.0" stroke="#E5E5E5" stroke-width="1"/>
-<text x="62" y="304.0" text-anchor="end" font-size="11" fill="#222">0</text>
-<line x1="70" y1="238.75" x2="690" y2="238.75" stroke="#E5E5E5" stroke-width="1"/>
-<text x="62" y="242.75" text-anchor="end" font-size="11" fill="#222">7500</text>
-<line x1="70" y1="177.5" x2="690" y2="177.5" stroke="#E5E5E5" stroke-width="1"/>
-<text x="62" y="181.5" text-anchor="end" font-size="11" fill="#222">15000</text>
-<line x1="70" y1="116.25" x2="690" y2="116.25" stroke="#E5E5E5" stroke-width="1"/>
-<text x="62" y="120.25" text-anchor="end" font-size="11" fill="#222">22500</text>
-<line x1="70" y1="55.0" x2="690" y2="55.0" stroke="#E5E5E5" stroke-width="1"/>
-<text x="62" y="59.0" text-anchor="end" font-size="11" fill="#222">30000</text>
-<rect x="77.3" y="279.25666666666666" width="21.7" height="20.743333333333332" fill="#C96442"/>
-<rect x="103.0" y="200.94650000000001" width="21.7" height="99.0535" fill="#5B8DEF"/>
-<text x="88.14999999999999" y="275.25666666666666" text-anchor="middle" font-size="10" fill="#222">2540</text>
-<text x="113.85" y="196.94650000000001" text-anchor="middle" font-size="10" fill="#222">12129</text>
-<text x="101.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 101.0 315)">analysis_001</text>
-<rect x="139.3" y="274.75683333333336" width="21.7" height="25.243166666666667" fill="#C96442"/>
-<rect x="165.0" y="244.73616666666666" width="21.7" height="55.26383333333333" fill="#5B8DEF"/>
-<text x="150.15" y="270.75683333333336" text-anchor="middle" font-size="10" fill="#222">3091</text>
-<text x="175.85" y="240.73616666666666" text-anchor="middle" font-size="10" fill="#222">6767</text>
-<text x="163.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 163.0 315)">analysis_002</text>
-<rect x="201.3" y="281.8455" width="21.7" height="18.1545" fill="#C96442"/>
-<rect x="227.0" y="125.08633333333333" width="21.7" height="174.91366666666667" fill="#5B8DEF"/>
-<text x="212.15" y="277.8455" text-anchor="middle" font-size="10" fill="#222">2223</text>
-<text x="237.85" y="121.08633333333333" text-anchor="middle" font-size="10" fill="#222">21418</text>
-<text x="225.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 225.0 315)">analysis_003</text>
-<rect x="263.3" y="240.65283333333332" width="21.7" height="59.347166666666666" fill="#C96442"/>
-<rect x="289.0" y="150.844" width="21.7" height="149.156" fill="#5B8DEF"/>
-<text x="274.15000000000003" y="236.65283333333332" text-anchor="middle" font-size="10" fill="#222">7267</text>
-<text x="299.85" y="146.844" text-anchor="middle" font-size="10" fill="#222">18264</text>
-<text x="287.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 287.0 315)">coding_001</text>
-<rect x="325.3" y="263.67466666666667" width="21.7" height="36.32533333333333" fill="#C96442"/>
-<rect x="351.0" y="67.52766666666668" width="21.7" height="232.47233333333332" fill="#5B8DEF"/>
-<text x="336.15000000000003" y="259.67466666666667" text-anchor="middle" font-size="10" fill="#222">4448</text>
-<text x="361.85" y="63.527666666666676" text-anchor="middle" font-size="10" fill="#222">28466</text>
-<text x="349.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 349.0 315)">coding_002</text>
-<rect x="387.3" y="260.3263333333333" width="21.7" height="39.67366666666667" fill="#C96442"/>
-<rect x="413.0" y="184.81733333333332" width="21.7" height="115.18266666666668" fill="#5B8DEF"/>
-<text x="398.15000000000003" y="256.3263333333333" text-anchor="middle" font-size="10" fill="#222">4858</text>
-<text x="423.85" y="180.81733333333332" text-anchor="middle" font-size="10" fill="#222">14104</text>
-<text x="411.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 411.0 315)">coding_003</text>
-<rect x="449.3" y="270.19166666666666" width="21.7" height="29.808333333333334" fill="#C96442"/>
-<rect x="475.0" y="235.65483333333333" width="21.7" height="64.34516666666667" fill="#5B8DEF"/>
-<text x="460.15000000000003" y="266.19166666666666" text-anchor="middle" font-size="10" fill="#222">3650</text>
-<text x="485.85" y="231.65483333333333" text-anchor="middle" font-size="10" fill="#222">7879</text>
-<text x="473.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 473.0 315)">coding_004</text>
-<rect x="511.29999999999995" y="280.14683333333335" width="21.7" height="19.853166666666667" fill="#C96442"/>
-<rect x="537.0" y="190.534" width="21.7" height="109.466" fill="#5B8DEF"/>
-<text x="522.15" y="276.14683333333335" text-anchor="middle" font-size="10" fill="#222">2431</text>
-<text x="547.85" y="186.534" text-anchor="middle" font-size="10" fill="#222">13404</text>
-<text x="535.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 535.0 315)">reasoning_001</text>
-<rect x="573.3" y="278.12149999999997" width="21.7" height="21.878500000000003" fill="#C96442"/>
-<rect x="599.0" y="300.0" width="21.7" height="0.0" fill="#5B8DEF"/>
-<text x="584.15" y="274.12149999999997" text-anchor="middle" font-size="10" fill="#222">2679</text>
-<text x="609.85" y="296.0" text-anchor="middle" font-size="10" fill="#222">0</text>
-<text x="597.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 597.0 315)">reasoning_002</text>
-<rect x="635.3" y="280.2121666666667" width="21.7" height="19.787833333333335" fill="#C96442"/>
-<rect x="661.0" y="249.03183333333334" width="21.7" height="50.96816666666666" fill="#5B8DEF"/>
-<text x="646.15" y="276.2121666666667" text-anchor="middle" font-size="10" fill="#222">2423</text>
-<text x="671.85" y="245.03183333333334" text-anchor="middle" font-size="10" fill="#222">6241</text>
-<text x="659.0" y="315" text-anchor="end" font-size="10" fill="#222" transform="rotate(-35 659.0 315)">reasoning_003</text>
-<line x1="70" y1="300" x2="690" y2="300" stroke="#222" stroke-width="1.5"/>
-<line x1="70" y1="55" x2="70" y2="300" stroke="#222" stroke-width="1.5"/>
-<text x="15" y="177.5" text-anchor="middle" font-size="12" fill="#222" transform="rotate(-90 15 177.5)">tokens</text>
-<rect x="510" y="63" width="14" height="14" fill="#C96442"/><text x="530" y="74" font-size="12" fill="#222">Opus 4.7</text>
-<rect x="600" y="63" width="14" height="14" fill="#5B8DEF"/><text x="620" y="74" font-size="12" fill="#222">Kimi K2.6</text>
+<line x1="78" y1="310.0" x2="828" y2="310.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="314.0" text-anchor="end" font-size="10" fill="#6A737D">0</text>
+<line x1="78" y1="264.0" x2="828" y2="264.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="268.0" text-anchor="end" font-size="10" fill="#6A737D">6000</text>
+<line x1="78" y1="218.0" x2="828" y2="218.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="222.0" text-anchor="end" font-size="10" fill="#6A737D">12.0k</text>
+<line x1="78" y1="172.0" x2="828" y2="172.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="176.0" text-anchor="end" font-size="10" fill="#6A737D">18.0k</text>
+<line x1="78" y1="126.0" x2="828" y2="126.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="130.0" text-anchor="end" font-size="10" fill="#6A737D">24.0k</text>
+<line x1="78" y1="80.0" x2="828" y2="80.0" stroke="#EEF0F3" stroke-width="1"/>
+<text x="68" y="84.0" text-anchor="end" font-size="10" fill="#6A737D">30.0k</text>
+<text x="22" y="195.0" text-anchor="middle" font-size="11" fill="#6A737D" transform="rotate(-90 22 195.0)">tokens</text>
+<rect x="86.5" y="290.52666666666664" width="27.0" height="19.473333333333333" rx="3" fill="#D97757"/>
+<text x="100.0" y="286.52666666666664" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">2540</text>
+<rect x="117.5" y="217.011" width="27.0" height="92.989" rx="3" fill="#4F7CF7"/>
+<text x="131.0" y="213.011" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">12.1k</text>
+<text x="115.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 115.5 324)">analysis_001</text>
+<rect x="161.5" y="286.3023333333333" width="27.0" height="23.697666666666667" rx="3" fill="#D97757"/>
+<text x="175.0" y="282.3023333333333" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">3091</text>
+<rect x="192.5" y="258.11966666666666" width="27.0" height="51.88033333333333" rx="3" fill="#4F7CF7"/>
+<text x="206.0" y="254.11966666666666" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">6767</text>
+<text x="190.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 190.5 324)">analysis_002</text>
+<rect x="236.5" y="292.957" width="27.0" height="17.043" rx="3" fill="#D97757"/>
+<text x="250.0" y="288.957" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">2223</text>
+<rect x="267.5" y="145.79533333333333" width="27.0" height="164.20466666666667" rx="3" fill="#4F7CF7"/>
+<text x="281.0" y="141.79533333333333" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">21.4k</text>
+<text x="265.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 265.5 324)">analysis_003</text>
+<rect x="311.5" y="254.28633333333335" width="27.0" height="55.71366666666667" rx="3" fill="#D97757"/>
+<text x="325.0" y="250.28633333333335" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">7267</text>
+<rect x="342.5" y="169.976" width="27.0" height="140.024" rx="3" fill="#4F7CF7"/>
+<text x="356.0" y="165.976" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">18.3k</text>
+<text x="340.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 340.5 324)">coding_001</text>
+<rect x="386.5" y="275.89866666666666" width="27.0" height="34.10133333333333" rx="3" fill="#D97757"/>
+<text x="400.0" y="271.89866666666666" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">4448</text>
+<rect x="417.5" y="91.76066666666668" width="27.0" height="218.23933333333332" rx="3" fill="#4F7CF7"/>
+<text x="431.0" y="87.76066666666668" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">28.5k</text>
+<text x="415.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 415.5 324)">coding_002</text>
+<rect x="461.5" y="272.75533333333334" width="27.0" height="37.24466666666667" rx="3" fill="#D97757"/>
+<text x="475.0" y="268.75533333333334" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">4858</text>
+<rect x="492.5" y="201.86933333333332" width="27.0" height="108.13066666666667" rx="3" fill="#4F7CF7"/>
+<text x="506.0" y="197.86933333333332" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">14.1k</text>
+<text x="490.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 490.5 324)">coding_003</text>
+<rect x="536.5" y="282.01666666666665" width="27.0" height="27.983333333333334" rx="3" fill="#D97757"/>
+<text x="550.0" y="278.01666666666665" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">3650</text>
+<rect x="567.5" y="249.59433333333334" width="27.0" height="60.40566666666667" rx="3" fill="#4F7CF7"/>
+<text x="581.0" y="245.59433333333334" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">7879</text>
+<text x="565.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 565.5 324)">coding_004</text>
+<rect x="611.5" y="291.3623333333333" width="27.0" height="18.637666666666668" rx="3" fill="#D97757"/>
+<text x="625.0" y="287.3623333333333" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">2431</text>
+<rect x="642.5" y="207.236" width="27.0" height="102.764" rx="3" fill="#4F7CF7"/>
+<text x="656.0" y="203.236" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">13.4k</text>
+<text x="640.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 640.5 324)">reasoning_001</text>
+<rect x="686.5" y="289.461" width="27.0" height="20.539" rx="3" fill="#D97757"/>
+<text x="700.0" y="285.461" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">2679</text>
+<rect x="717.5" y="310.0" width="27.0" height="0.1" rx="3" fill="#4F7CF7"/>
+<text x="731.0" y="306.0" text-anchor="middle" font-size="9" fill="#6A737D">0</text>
+<text x="715.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 715.5 324)">reasoning_002</text>
+<rect x="761.5" y="291.4236666666667" width="27.0" height="18.576333333333334" rx="3" fill="#D97757"/>
+<text x="775.0" y="287.4236666666667" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">2423</text>
+<rect x="792.5" y="262.15233333333333" width="27.0" height="47.84766666666666" rx="3" fill="#4F7CF7"/>
+<text x="806.0" y="258.15233333333333" text-anchor="middle" font-size="9" fill="#1F2328" font-weight="600">6241</text>
+<text x="790.5" y="324" text-anchor="end" font-size="10" fill="#1F2328" transform="rotate(-32 790.5 324)">reasoning_003</text>
+<line x1="78" y1="310" x2="828" y2="310" stroke="#1F2328" stroke-width="1.2"/>
+<circle cx="84" cy="398" r="6" fill="#D97757"/><text x="96" y="402" font-size="12" fill="#1F2328">Opus 4.7</text><circle cx="166" cy="398" r="6" fill="#4F7CF7"/><text x="178" y="402" font-size="12" fill="#1F2328">Kimi K2.6</text>
 </svg>
